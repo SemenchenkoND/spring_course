@@ -7,9 +7,12 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="testBean"
-          class="ru.nsemenchenko.springcourse.TestBean">
-        <constructor-arg value="NAME"/>
+    <bean id="musicBean"
+          class="ru.nsemenchenko.springcourse.RockMusic">
+    </bean>
+    <bean id="musicPlayer"
+          class="ru.nsemenchenko.springcourse.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
     </bean>
 
 </beans>
